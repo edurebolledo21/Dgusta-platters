@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="img/icons8-tapas-80 (1).ico" type="image/x-icon" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400;500;600;700&family=Inconsolata:wght@400;600;700&family=Josefin+Sans:wght@300&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400;500;600;700&family=Inconsolata:wght@400;600;700&family=Josefin+Sans:wght@300&family=Kalam:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Iniciar Sesión</title>
+</head>
+
+<body>
+  <div id="container">
+    <a href="/">
+      <h1 id="title">Dgusta Platters</h1>
+    </a>
+    <form id="form">
+      <h1><a href="/login/">Iniciar Sesión</a> / <a href="/sing-up/">Registrarse</a></h1>
+      <div class="input-container">
+        <label class="font-bolt" for="email-input">Email</label>
+        <input class="login-inputs" required type="email" name="email-input" id="email-input" />
+      </div>
+      <div class="input-container">
+        <label class="font-bolt" for="email-pass">Contraseña</label>
+        <input class="login-inputs" required type="password" name="pass-input" id="email-pass" />
+      </div>
+      <hr />
+      <button id="login-btn" type="submit">INICIAR SESIÓN</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="index.js"></script>
+</body>
+
+</html>

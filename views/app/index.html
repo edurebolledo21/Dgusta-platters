@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="img/icons8-tapas-80 (1).ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ca5d1d" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ca5d1d" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400;500;600;700&family=Inconsolata:wght@400;600;700&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400;500;600;700&family=Inconsolata:wght@400;600;700&family=Josefin+Sans:wght@300&family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dgusta Platters</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- nav-bar -->
+      <nav id="nav-bar">
+        <h1 id="title"><a href="/">Dgusta Platters</a></h1>
+        <div class="bar-option">
+          <div class="login">
+            <a href="/sing-up/">
+              <h2 class="options">Registrarse</h2>
+            </a>
+            <a href="/login/">
+              <h2 class="options">Iniciar Sesión</h2>
+            </a>
+          </div>
+          <div class="cerrar-sesion">
+            <button>
+              <h2 class="options">Cerrar sesión</h2>
+            </button>
+          </div>
+          <div id="logout">
+            <svg id="logout-icon" class="options" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
+              />
+            </svg>
+          </div>
+          <div id="car">
+            <svg class="options" id="car-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+
+          <div id="bar">
+            <svg class="options" id="bar-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- carrito de compras -->
+        <section class="car" id="car-id">
+          <table>
+            <thead>
+              <tr>
+                <th class="table-title">Imagen</th>
+                <th class="table-title">Nombre</th>
+                <th class="table-title">Precio</th>
+                <th class="table-title">Cantidad</th>
+                <th class="table-title"></th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+          <div id="flex-btn">
+            <button class="btns-carrito" id="btn-clear">VACIAR CARRITO</button>
+            <button class="btns-carrito" id="btn-comprar">COMPRAR</button>
+          </div>
+        </section>
+        <!-- menu -->
+        <section class="menu">
+          <div id="login-menu">
+            <a href="/login/">
+              <h2 class="options">Iniciar Sesión</h2>
+            </a>
+            <a href="/sing-up/">
+              <h2 class="options">Registrarse</h2>
+            </a>
+          </div>
+        </section>
+      </nav>
+
+      <!-- content -->
+      <div id="principal">
+        <div id="principal-title">
+          <p data-aos="fade-right" data-aos-duration="2000">Mejor opción</p>
+          <p data-aos="fade-right" data-aos-duration="2000">para tus eventos</p>
+        </div>
+
+        <div class="links">
+          <a href="placeholder" target="_blank"><img class="redes" src="img/facebook.png" alt="" /></a>
+          <a href="https://www.instagram.com/dgustaplatters/?hl=es" target="_blank"><img class="redes" src="img/instagram.png" alt="" /></a>
+          <a href="placeholder" target="_blank"><img class="redes" src="img/whatsapp.png" alt="" /></a>
+        </div>
+      </div>
+
+      <!-- second-bar -->
+      <nav id="second-bar" data-aos="fade-down" data-aos-duration="800">
+        <div class="borde">
+          <h1 class="options"><a href="#title-platters">Tables & Boxes</a></h1>
+        </div>
+        <div class="borde">
+          <h1 id="assemble" class="options">Arma tu propia tabla</h1>
+        </div>
+        <div class="borde" id="ordenar-id">
+          <select name="" id="ordenar">
+            <option selected disabled value="">¿Que buscas?</option>
+            <option value="section-1">Eventos</option>
+            <option value="section-2">Golosinas</option>
+            <option value="section-3">Vegetariano</option>
+            <option value="section-4">Picnic boxes</option>
+          </select>
+        </div>
+      </nav>
+
+      <!-- gracing tables -->
+      <div id="title-platters">
+        <h1 class="text-slate-100">Grazing tables & Picnic Boxes</h1>
+      </div>
+      <div class="subtitle-platters subtitle-bg" id="section-1">
+        <h1 class="text-slate-100" data-aos="fade-up" data-aos-duration="800">Eventos</h1>
+      </div>
+
+      <div class="section-buy" data-aos="fade-up" data-aos-duration="1500">
+        <div id="container-buy">
+          <img src="img/table-1.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Grazing para 100</p>
+            <p class="container-precio">$2300.00</p>
+          </div>
+          <div id="btn-edit">
+            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </div>
+            <!-- boton detalles       -->
+            <a class="btn" href="#open-modal1">
+              <div title="Detalles">
+                <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div id="container-buy">
+          <img src="img/table-2.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Grazing para 80</p>
+            <p class="container-precio">$1440.62</p>
+          </div>
+          <div id="btn-edit">
+            <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </abbr>
+            <!-- boton detalles       -->
+            <a class="btn" href="#open-modal2">
+              <abbr title="Detalles">
+                <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </abbr>
+            </a>
+          </div>
+        </div>
+        <div id="container-buy">
+          <img src="img/table-3.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Grazing para 50</p>
+            <p class="container-precio">$1050.00</p>
+          </div>
+          <div id="btn-edit">
+            <!-- boton comprar -->
+            <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </abbr>
+            <!-- boton detalles       -->
+            <a class="btn" href="#open-modal3">
+              <abbr title="Detalles">
+                <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </abbr>
+            </a>
+          </div>
+        </div>
+        <div id="container-buy">
+          <img src="img/table-4.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Grazing para 30</p>
+            <p class="container-precio">$950.00</p>
+          </div>
+          <div id="btn-edit">
+            <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </abbr>
+            <!-- boton detalles       -->
+            <a class="btn" href="#open-modal4">
+              <abbr title="Detalles">
+                <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </abbr>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-picnic" id="section-2">
+        <div class="subtitle-picnic subtitle-bg">
+          <h1 class="text-slate-100" data-aos="fade-up" data-aos-duration="800">Golosinas</h1>
+        </div>
+        <div class="picnic-content" data-aos="fade-up" data-aos-duration="1500">
+          <div id="container-buy">
+            <img src="img/candybox-1.jpg" alt="" />
+            <div class="container-info">
+              <p class="container-titulo">TREAT BOX - 1</p>
+              <p class="container-precio">$85.00</p>
+            </div>
+            <div id="btn-edit">
+              <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                  />
+                </svg>
+              </abbr>
+              <!-- boton detalles       -->
+              <a class="btn" href="#open-modal5">
+                <abbr title="Detalles">
+                  <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </abbr>
+              </a>
+            </div>
+          </div>
+          <div id="container-buy">
+            <img src="img/candybox-2.jpg" alt="" />
+            <div class="container-info">
+              <p class="container-titulo">TREAT BOX - 2</p>
+              <p class="container-precio">$85.00</p>
+            </div>
+            <div id="btn-edit">
+              <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                  />
+                </svg>
+              </abbr>
+              <!-- boton detalles       -->
+              <a class="btn" href="#open-modal6">
+                <abbr title="Detalles">
+                  <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </abbr>
+              </a>
+            </div>
+          </div>
+          <div id="container-buy">
+            <img src="img/candybox-3.jpg" alt="" />
+            <div class="container-info">
+              <p class="container-titulo">TREAT BOX - 3</p>
+              <p class="container-precio">$85.00</p>
+            </div>
+            <div id="btn-edit">
+              <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                  />
+                </svg>
+              </abbr>
+              <!-- boton detalles       -->
+              <a class="btn" href="#open-modal7">
+                <abbr title="Detalles">
+                  <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </abbr>
+              </a>
+            </div>
+          </div>
+          <div id="container-buy">
+            <img src="img/box-3.jpg" alt="" />
+            <div class="container-info">
+              <p class="container-titulo">TREAT BOX - 4</p>
+              <p class="container-precio">$100.00</p>
+            </div>
+            <div id="btn-edit">
+              <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                  />
+                </svg>
+              </abbr>
+              <!-- boton detalles       -->
+              <a class="btn" href="#open-modal8">
+                <abbr title="Detalles">
+                  <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </abbr>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- vegetariano -->
+
+      <div class="subtitle-platters subtitle-bg" id="section-3">
+        <h1 class="text-slate-100" data-aos="fade-up" data-aos-duration="800">Vegetariano</h1>
+      </div>
+      <div class="section-buy" data-aos="fade-up" data-aos-duration="1500">
+        <div id="container-buy">
+          <img src="img/vegetarian-1.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Vegetarian - 1</p>
+            <p class="container-precio">$99.99</p>
+          </div>
+          <div id="btn-edit">
+            <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </abbr>
+            <!-- boton detalles       -->
+            <a class="btn" href="#open-modal9">
+              <abbr title="Detalles">
+                <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </abbr>
+            </a>
+          </div>
+        </div>
+        <div id="container-buy">
+          <img src="img/vegetarian-2.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Vegetarian - 2</p>
+            <p class="container-precio">$120.25</p>
+          </div>
+          <div id="btn-edit">
+            <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </abbr>
+            <!-- boton detalles       -->
+            <a class="btn" href="#open-modal10">
+              <abbr title="Detalles">
+                <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </abbr>
+            </a>
+          </div>
+        </div>
+        <div id="container-buy">
+          <img src="img/vegetarian-3.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Vegetarian - 3</p>
+            <p class="container-precio">$125.00</p>
+          </div>
+          <div id="btn-edit">
+            <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </abbr>
+            <!-- boton detalles       -->
+            <a class="btn" href="#open-modal11">
+              <abbr title="Detalles">
+                <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </abbr>
+            </a>
+          </div>
+        </div>
+        <div id="container-buy">
+          <img src="img/vegetarian-4.jfif" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Vegetarian - 4</p>
+            <p class="container-precio">$80.00</p>
+          </div>
+          <div id="btn-edit">
+            <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </abbr>
+            <!-- boton detalles       -->
+            <a class="btn" href="#open-modal12">
+              <abbr title="Detalles">
+                <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </abbr>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-picnic" id="section-4">
+        <div class="subtitle-picnic subtitle-bg">
+          <h1 class="text-slate-100" data-aos="fade-up" data-aos-duration="800">Picnic Boxes</h1>
+        </div>
+        <div class="picnic-content" data-aos="fade-up" data-aos-duration="1500">
+          <div id="container-buy">
+            <img src="img/box-1.jpg" alt="" />
+            <div class="container-info">
+              <p class="container-titulo">BRUNCH BOX</p>
+              <p class="container-precio">$145.00</p>
+            </div>
+            <div id="btn-edit">
+              <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                  />
+                </svg>
+              </abbr>
+              <!-- boton detalles       -->
+              <a class="btn" href="#open-modal13">
+                <abbr title="Detalles">
+                  <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </abbr>
+              </a>
+            </div>
+          </div>
+          <div id="container-buy">
+            <img src="img/box-2.jpeg" alt="" />
+            <div class="container-info">
+              <p class="container-titulo">THE SEASONAL SERIES: SPRING</p>
+              <p class="container-precio">$85.60</p>
+            </div>
+            <div id="btn-edit">
+              <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                  />
+                </svg>
+              </abbr>
+              <!-- boton detalles       -->
+              <a class="btn" href="#open-modal14">
+                <abbr title="Detalles">
+                  <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </abbr>
+              </a>
+            </div>
+          </div>
+          <div id="container-buy">
+            <img src="img/box-5.jpeg" alt="" />
+            <div class="container-info">
+              <p class="container-titulo">THE BRIE WREATH</p>
+              <p class="container-precio">$110.10</p>
+            </div>
+            <div id="btn-edit">
+              <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                  />
+                </svg>
+              </abbr>
+              <!-- boton detalles       -->
+              <a class="btn" href="#open-modal15">
+                <abbr title="Detalles">
+                  <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </abbr>
+              </a>
+            </div>
+          </div>
+          <div id="container-buy">
+            <img src="img/box-4.jpg" alt="" />
+            <div class="container-info">
+              <p class="container-titulo">MINI PICNIC BOX</p>
+              <p class="container-precio">$75.00</p>
+            </div>
+            <div id="btn-edit">
+              <abbr class="btns-buy" id="add-btn" title="Agregar al carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                  />
+                </svg>
+              </abbr>
+              <!-- boton detalles       -->
+              <a class="btn" href="#open-modal16">
+                <abbr title="Detalles">
+                  <svg id="detalles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </abbr>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="background">
+      <footer data-aos="fade-right" data-aos-duration="1500">
+        <div class="footer-upper">
+          <div class="footer-logo">
+            <h1 id="title"><a href="/">Dgusta Platters</a></h1>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h1>Navegacion</h1>
+              <ul class="footer-col">
+                <li><a href="#section-1">Eventos</a></li>
+                <li><a href="#section-2">Golosinas</a></li>
+                <li><a href="#section-3">Vegetariano</a></li>
+                <li><a href="#section-4">Picnic & Boxes</a></li>
+              </ul>
+            </div>
+            <div>
+              <h1>Usuario</h1>
+              <ul class="footer-col">
+                <li><a href="/assemble/">Arma tu propia tabla</a></li>
+                <li><a href="/login/">Iniciar Sesión</a></li>
+                <li><a href="/sing-up/">Registro</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr id="hr-footer" />
+        <div id="footer-copy">
+          <div class="footer-social">
+            <a href="placeholder" target="_blank"><img class="redes" src="img/facebook.png" alt="" /></a>
+            <a href="https://www.instagram.com/dgustaplatters/?hl=es" target="_blank"><img class="redes" src="img/instagram.png" alt="" /></a>
+            <a href="placeholder" target="_blank"><img class="redes" src="img/whatsapp.png" alt="" /></a>
+          </div>
+          <h4>©Copyright. All rights reserved</h4>
+        </div>
+      </footer>
+    </div>
+
+    <div class="zoom">
+      <img class="zoom-image" src="" alt="" />
+    </div>
+
+    <!-- Eventos modal -->
+    <div id="open-modal1" class="modal-window">
+      <div>
+        <a href="#section-1" title="Cerrar" class="modal-close">&#10060;</a>
+        <h1>Grazing para 100</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Queso Brie <br />
+          - Queso Bufala <br />
+          - Queso Gorgonzola <br />
+          - Queso Gouda <br />
+          - Pan de Centeno<br />
+          - Pan Ciabatta<br />
+          - Pan Brioche<br />
+          - Gacamole<br />
+          - Pesto <br />
+          - Pate de tomate <br />
+          - Mostaza Dijon <br />
+          - Galletas <br />
+          - Fresas<br />
+          - Mandarinas<br />
+          - Kiwi<br />
+          - Uvas<br />
+          USD 2300.00
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal2" class="modal-window">
+      <div>
+        <a href="#section-1" title="Close" class="modal-close">&#10060;</a>
+        <h1>Grazing para 80</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Queso Brie <br />
+          - Queso Bufala <br />
+          - Queso Gorgonzola <br />
+          - Queso Gouda <br />
+          - Pan de Centeno<br />
+          - Pan Ciabatta<br />
+          - Pan Brioche<br />
+          - Gacamole<br />
+          - Pesto <br />
+          - Pate de tomate <br />
+          - Mostaza Dijon <br />
+          - Galletas <br />
+          - Fresas<br />
+          - Mandarinas<br />
+          - Kiwi<br />
+          - Uvas<br />
+          USD 1440.62
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal3" class="modal-window">
+      <div>
+        <a href="#section-1" title="Close" class="modal-close">&#10060;</a>
+        <h1>Grazing para 50</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Queso Brie <br />
+          - Queso Bufala <br />
+          - Queso Gorgonzola <br />
+          - Queso Gouda <br />
+          - Pan de Centeno<br />
+          - Pan Ciabatta<br />
+          - Pan Brioche<br />
+          - Gacamole<br />
+          - Pesto <br />
+          - Pate de tomate <br />
+          - Mostaza Dijon <br />
+          - Galletas <br />
+          - Fresas<br />
+          - Mandarinas<br />
+          - Kiwi<br />
+          - Uvas<br />
+          USD 1050.00
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal4" class="modal-window">
+      <div>
+        <a href="#section-1" title="Close" class="modal-close">&#10060;</a>
+        <h1>Grazing para 30</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Queso Brie <br />
+          - Queso Bufala <br />
+          - Queso Gorgonzola <br />
+          - Queso Gouda <br />
+          - Pan de Centeno<br />
+          - Pan Ciabatta<br />
+          - Pan Brioche<br />
+          - Gacamole<br />
+          - Pesto <br />
+          - Pate de tomate <br />
+          - Mostaza Dijon <br />
+          - Galletas <br />
+          - Fresas<br />
+          - Mandarinas<br />
+          - Kiwi<br />
+          - Uvas<br />
+          USD 950.00
+        </p>
+      </div>
+    </div>
+
+    <!-- Golosinas modal -->
+    <div id="open-modal5" class="modal-window">
+      <div>
+        <a href="#section-2" title="Close" class="modal-close">&#10060;</a>
+        <h1>TREAT BOX - 1</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Donas rellenas <br />
+          - Caramelos surtidos <br />
+          - Bombones <br />
+          - Galletas de chocolate <br />
+          - Snickers<br />
+          - Hershey's<br />
+          - Marshmallow<br />
+          - Gomitas<br />
+          - Milky Way<br />
+          USD 85.00
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal6" class="modal-window">
+      <div>
+        <a href="#section-2" title="Close" class="modal-close">&#10060;</a>
+        <h1>TREAT BOX - 2</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Donas rellenas <br />
+          - Caramelos surtidos <br />
+          - Bombones <br />
+          - Galletas de chocolate <br />
+          - Snickers<br />
+          - Hershey's<br />
+          - Marshmallow<br />
+          - Gomitas<br />
+          - Milky Way<br />
+          USD 85.00
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal7" class="modal-window">
+      <div>
+        <a href="#section-2" title="Close" class="modal-close">&#10060;</a>
+        <h1>TREAT BOX - 3</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Donas rellenas <br />
+          - Caramelos surtidos <br />
+          - Bombones <br />
+          - Galletas de chocolate <br />
+          - Snickers<br />
+          - Hershey's<br />
+          - Marshmallow<br />
+          - Gomitas<br />
+          - Milky Way<br />
+          USD 85.00
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal8" class="modal-window">
+      <div>
+        <a href="#section-2" title="Close" class="modal-close">&#10060;</a>
+        <h1>TREAT BOX - 4</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Donas rellenas <br />
+          - Caramelos surtidos <br />
+          - Bombones <br />
+          - Galletas de chocolate <br />
+          - Snickers<br />
+          - Hershey's<br />
+          - Marshmallow<br />
+          - Gomitas<br />
+          - Milky Way<br />
+          USD 100.00
+        </p>
+      </div>
+    </div>
+
+    <!-- vegetariano -->
+    <div id="open-modal9" class="modal-window">
+      <div>
+        <a href="#section-3" title="Close" class="modal-close">&#10060;</a>
+        <h1>Vegetarian - 1</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span><br />
+          - Fresas<br />
+          - Mandarinas<br />
+          - Kiwi<br />
+          - Uvas<br />
+          - Zanahoria<br />
+          - Pistachos<br />
+          - Queso Brie <br />
+          - Queso Bufala <br />
+          - Queso Gouda <br />
+          - Pan de Centeno<br />
+          - Gacamole<br />
+          - Pate de tomate <br />
+          - Pate de atún <br />
+          - Pesto <br />
+          - Galletas integrales <br />
+          - Galletas de avena <br />
+          - Galletas de sesamo y linaza <br />
+          - Galletas de jengibre <br />
+          USD 99.99
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal10" class="modal-window">
+      <div>
+        <a href="#section-3" title="Close" class="modal-close">&#10060;</a>
+        <h1>Vegetarian - 2</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span><br />
+          - Fresas<br />
+          - Mandarinas<br />
+          - Kiwi<br />
+          - Uvas<br />
+          - Zanahoria<br />
+          - Pistachos<br />
+          - Queso Brie <br />
+          - Queso Bufala <br />
+          - Queso Gouda <br />
+          - Pan de Centeno<br />
+          - Gacamole<br />
+          - Pate de tomate <br />
+          - Pate de atún <br />
+          - Pesto <br />
+          - Galletas integrales <br />
+          - Galletas de avena <br />
+          - Galletas de sesamo y linaza <br />
+          - Galletas de jengibre <br />
+          USD 120.25
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal11" class="modal-window">
+      <div>
+        <a href="#section-3" title="Close" class="modal-close">&#10060;</a>
+        <h1>Vegetarian - 3</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span><br />
+          - Fresas<br />
+          - Mandarinas<br />
+          - Kiwi<br />
+          - Uvas<br />
+          - Zanahoria<br />
+          - Pistachos<br />
+          - Queso Brie <br />
+          - Queso Bufala <br />
+          - Queso Gouda <br />
+          - Pan de Centeno<br />
+          - Gacamole<br />
+          - Pate de tomate <br />
+          - Pate de atún <br />
+          - Pesto <br />
+          - Galletas integrales <br />
+          - Galletas de avena <br />
+          - Galletas de sesamo y linaza <br />
+          - Galletas de jengibre <br />
+          USD 125.00
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal12" class="modal-window">
+      <div>
+        <a href="#section-3" title="Close" class="modal-close">&#10060;</a>
+        <h1>Vegetarian - 4</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span><br />
+          - Fresas<br />
+          - Mandarinas<br />
+          - Kiwi<br />
+          - Uvas<br />
+          - Zanahoria<br />
+          - Pistachos<br />
+          - Queso Brie <br />
+          - Queso Bufala <br />
+          - Queso Gouda <br />
+          - Pan de Centeno<br />
+          - Gacamole<br />
+          - Pate de tomate <br />
+          - Pate de atún <br />
+          - Pesto <br />
+          - Galletas integrales <br />
+          - Galletas de avena <br />
+          - Galletas de sesamo y linaza <br />
+          - Galletas de jengibre <br />
+          USD 80.00
+        </p>
+      </div>
+    </div>
+
+    <!-- Picnic modal -->
+    <div id="open-modal13" class="modal-window">
+      <div>
+        <a href="#section-4" title="Close" class="modal-close">&#10060;</a>
+        <h1>BRUNCH BOX</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Pan Brioche<br />
+          - Croissant<br />
+          - Waffle<br />
+          - Hot cakes<br />
+          - Capicola<br />
+          - Jamón<br />
+          - Salami<br />
+          - Pastrami<br />
+          - Pate de atún <br />
+          - Mostaza Dijon <br />
+          - Fresas<br />
+          - Uvas<br />
+          - Galletas <br />
+          - Queso Gorgonzola <br />
+          - Queso Gouda <br />
+          USD 145.00
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal14" class="modal-window">
+      <div>
+        <a href="#section-4" title="Close" class="modal-close">&#10060;</a>
+        <h1>THE SEASONAL SERIES: SPRING</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Pan Brioche<br />
+          - Croissant<br />
+          - Waffle<br />
+          - Hot cakes<br />
+          - Capicola<br />
+          - Jamón<br />
+          - Salami<br />
+          - Pastrami<br />
+          - Pate de atún <br />
+          - Mostaza Dijon <br />
+          - Fresas<br />
+          - Uvas<br />
+          - Galletas <br />
+          - Queso Gorgonzola <br />
+          - Queso Gouda <br />
+          USD 85.60
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal15" class="modal-window">
+      <div>
+        <a href="#section-4" title="Close" class="modal-close">&#10060;</a>
+        <h1>THE BRIE WREATH</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Pan Brioche<br />
+          - Croissant<br />
+          - Waffle<br />
+          - Hot cakes<br />
+          - Capicola<br />
+          - Jamón<br />
+          - Salami<br />
+          - Pastrami<br />
+          - Pate de atún <br />
+          - Mostaza Dijon <br />
+          - Fresas<br />
+          - Uvas<br />
+          - Galletas <br />
+          - Queso Gorgonzola <br />
+          - Queso Gouda <br />
+          USD 110.10
+        </p>
+      </div>
+    </div>
+
+    <div id="open-modal16" class="modal-window">
+      <div>
+        <a href="#section-4" title="Close" class="modal-close">&#10060;</a>
+        <h1>MINI PICNIC BOX</h1>
+        <p>
+          <span style="color: #9b4a1b">CONTIENE:</span> <br />
+          - Pan Brioche<br />
+          - Croissant<br />
+          - Waffle<br />
+          - Hot cakes<br />
+          - Capicola<br />
+          - Jamón<br />
+          - Salami<br />
+          - Pastrami<br />
+          - Pate de atún <br />
+          - Mostaza Dijon <br />
+          - Fresas<br />
+          - Uvas<br />
+          - Galletas <br />
+          - Queso Gorgonzola <br />
+          - Queso Gouda <br />
+          USD 75.00
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

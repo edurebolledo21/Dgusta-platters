@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="img/icons8-tapas-80 (1).ico"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ca5d1d" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ca5d1d" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400;500;600;700&family=Inconsolata:wght@400;600;700&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400;500;600;700&family=Inconsolata:wght@400;600;700&family=Josefin+Sans:wght@300&family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Arma tu propia tabla</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- barra de Navegacion -->
+      <nav id="nav-bar">
+        <h1 id="title"><a href="/">Dgusta Platters</a></h1>
+        
+        <div id="items-nav">
+          <div id="nav-content">
+            <select name="" id="ingredientes">
+              <option selected disabled value="">Ingredientes</option>
+              <option value="section-1">Quesos</option>
+              <option value="section-2">Panes</option>
+              <option value="section-3">Charcutería</option>
+              <option value="section-4">Galletas</option>
+              <option value="section-5">Salsas y Dips</option>
+              <option value="section-6">Frutas</option>
+            </select>
+          </div>
+          <div id="car">
+            <svg
+              class="options"
+              id="car-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+
+        <!-- carrito de compras -->
+        <section class="car" id="car-id">
+          <table>
+            <thead>
+              <tr>
+                <th class="table-title">Imagen</th>
+                <th class="table-title">Nombre</th>
+                <th class="table-title">Precio</th>
+                <th class="table-title">Cantidad</th>
+                <th class="table-title"></th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+          <div id="flex-btn">
+            <button class="btns-carrito" id="btn-clear">VACIAR CARRITO</button>
+            <button class="btns-carrito" id="btn-comprar">COMPRAR</button>
+          </div>
+        </section>
+
+        </div>
+      </nav>
+      <div id="presentation">
+        <h1 data-aos="fade-right" data-aos-duration="2000">Nuestros ingredientes</h1>
+        <p data-aos="fade-right" data-aos-duration="2000">
+          Descubre nuestra lista de ingredientes disponibles para que
+          personalices tu tabla.
+        </p>
+      </div>
+
+      <!-- section ingredientes -->
+
+      <div class="subtitle-platters subtitle-bg" id="section-1">
+        <h1 class="text-slate-100" data-aos="fade-up" data-aos-duration="800">Quesos</h1>
+      </div>
+        
+      <div class="section-buy" data-aos="fade-up" data-aos-duration="1500">
+        <div id="container-buy" >
+          <img src="img/queso-brie.jpeg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Brie</p>
+            <p class="container-precio">$3.54 100g</p>
+          </div>
+          <div id="btn-edit">
+            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </div>
+              </div>
+            </div>
+        <div id="container-buy">
+          <img src="img/mozarella.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Bufala</p>
+            <p class="container-precio">$3.54 100g</p>
+          </div>
+          <div id="btn-edit">
+            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </div>
+              </div>
+            </div>
+        <div id="container-buy">
+          <img src="img/Gorgonzola.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Gorgonzola</p>
+            <p class="container-precio">$2.61 100g</p>
+          </div>
+          <div id="btn-edit">
+            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </div>
+              </div>
+            </div>
+        <div id="container-buy">
+          <img src="img/Gauda.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Gouda</p>
+            <p class="container-precio">$2.61 100g</p>
+          </div>
+          <div id="btn-edit">
+            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </div>
+              </div>
+            </div>
+        <div id="container-buy">
+          <img src="img/Grana Padano.jpg" alt="" />
+          <div class="container-info">
+            <p class="container-titulo">Grana Padano</p>
+            <p class="container-precio">$10.81 300g</p>
+          </div>
+          <div id="btn-edit">
+            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                />
+              </svg>
+            </div>
+              </div>
+            </div>
+       
+          </div>
+
+          <!-- section 2-->
+          <div class="subtitle-platters subtitle-bg" id="section-2">
+            <h1 class="text-slate-100" data-aos="fade-up" data-aos-duration="800">Panes</h1>
+          </div>
+          
+          <div class="section-buy" data-aos="fade-up" data-aos-duration="1500">
+            <div id="container-buy">
+              <img src="img/centeno.jpg" alt="" />
+              <div class="container-info">
+                <p class="container-titulo">Centeno</p>
+                <p class="container-precio">$2.24 130g</p>
+              </div>
+              <div id="btn-edit">
+                <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                    />
+                  </svg>
+                </div>
+                  </div>
+                </div>
+            <div id="container-buy">
+              <img src="img/pan-normal.jpg" alt="" />
+              <div class="container-info">
+                <p class="container-titulo">Baguete tradicional</p>
+                <p class="container-precio">$1.68 85g</p>
+              </div>
+              <div id="btn-edit">
+                <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                    />
+                  </svg>
+                </div>
+                  </div>
+                </div>
+            <div id="container-buy">
+              <img src="img/baguette-multicereales.jpg" alt="" />
+              <div class="container-info">
+                <p class="container-titulo">Multicereales</p>
+                <p class="container-precio">$2.05 85g</p>
+              </div>
+              <div id="btn-edit">
+                <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                    />
+                  </svg>
+                </div>
+                  </div>
+                </div>
+            <div id="container-buy">
+              <img src="img/ciabatta.jpg" alt="" />
+              <div class="container-info">
+                <p class="container-titulo">Ciabatta</p>
+                <p class="container-precio">$2.24 130g</p>
+              </div>
+              <div id="btn-edit">
+                <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                    />
+                  </svg>
+                </div>
+                  </div>
+                </div>
+            <div id="container-buy">
+              <img src="img/Mini-Brioche.jpg" alt="" />
+              <div class="container-info">
+                <p class="container-titulo">Mini Brioche</p>
+                <p class="container-precio">$0.93 50g</p>
+              </div>
+              <div id="btn-edit">
+                <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                    />
+                  </svg>
+                </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- section 3 -->
+              <div class="subtitle-platters subtitle-bg" id="section-3">
+                <h1 class="text-slate-100" data-aos="fade-up" data-aos-duration="800" data-aos="fade-up" data-aos-duration="800">Charcuterìa</h1>
+              </div>
+              
+              <div class="section-buy" data-aos="fade-up" data-aos-duration="1500">
+                <div id="container-buy">
+                  <img src="img/Capicola.jpg" alt="" />
+                  <div class="container-info">
+                    <p class="container-titulo">Capicola</p>
+                    <p class="container-precio">$3.73 100g</p>
+                  </div>
+                  <div id="btn-edit">
+                    <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                        />
+                      </svg>
+                    </div>
+                      </div>
+                    </div>
+                <div id="container-buy">
+                  <img src="img/Jamon crudo.jpg" alt="" />
+                  <div class="container-info">
+                    <p class="container-titulo">Jamón Crudo</p>
+                    <p class="container-precio">$5.59 100g</p>
+                  </div>
+                  <div id="btn-edit">
+                    <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                        />
+                      </svg>
+                    </div>
+                      </div>
+                    </div>
+                <div id="container-buy">
+                  <img src="img/Salami.jpg" alt="" />
+                  <div class="container-info">
+                    <p class="container-titulo">Salami</p>
+                    <p class="container-precio">$3.17 100g</p>
+                  </div>
+                  <div id="btn-edit">
+                    <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                        />
+                      </svg>
+                    </div>
+                      </div>
+                    </div>
+                <div id="container-buy">
+                  <img src="img/solomo.jpg" alt="" />
+                  <div class="container-info">
+                    <p class="container-titulo">Solomillo</p>
+                    <p class="container-precio">$2.24 100g</p>
+                  </div>
+                  <div id="btn-edit">
+                    <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                        />
+                      </svg>
+                    </div>
+                      </div>
+                    </div>
+                <div id="container-buy">
+                  <img src="img/pastrami.jpg" alt="" />
+                  <div class="container-info">
+                    <p class="container-titulo">Pastrami</p>
+                    <p class="container-precio">$3.54 100g</p>
+                  </div>
+                  <div id="btn-edit">
+                    <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                        />
+                      </svg>
+                    </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- section 4 -->
+                  <div class="subtitle-platters subtitle-bg" id="section-4">
+                    <h1 class="text-slate-100" data-aos="fade-up" data-aos-duration="800">Galletas</h1>
+                  </div>
+                  
+                  <div class="section-buy" data-aos="fade-up" data-aos-duration="1500">
+                    <div id="container-buy">
+                      <img src="img/Galletas de mantequilla.jpg" alt="" />
+                      <div class="container-info">
+                        <p class="container-titulo">Galletas de mantequilla</p>
+                        <p class="container-precio">$1.20 100g</p>
+                      </div>
+                      <div id="btn-edit">
+                        <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-6 h-6"
+                          >
+                            <path
+                              d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                            />
+                          </svg>
+                        </div>
+                          </div>
+                        </div>
+                    <div id="container-buy">
+                      <img src="img/galletas de jengibre.PNG" alt="" />
+                      <div class="container-info">
+                        <p class="container-titulo">Galletas de jengibre</p>
+                        <p class="container-precio">$1.80 100g</p>
+                      </div>
+                      <div id="btn-edit">
+                        <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-6 h-6"
+                          >
+                            <path
+                              d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                            />
+                          </svg>
+                        </div>
+                          </div>
+                        </div>
+                    <div id="container-buy">
+                      <img src="img/galletas de sesamo y linaza.jpeg" alt="" />
+                      <div class="container-info">
+                        <p class="container-titulo">Sesamo y Linaza</p>
+                        <p class="container-precio">$2.60 100g</p>
+                      </div>
+                      <div id="btn-edit">
+                        <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-6 h-6"
+                          >
+                            <path
+                              d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                            />
+                          </svg>
+                        </div>
+                          </div>
+                        </div>
+                    <div id="container-buy">
+                      <img src="img/galletas de avena.jpg" alt="" />
+                      <div class="container-info">
+                        <p class="container-titulo">Galletas de avena</p>
+                        <p class="container-precio">$2.00 100g</p>
+                      </div>
+                      <div id="btn-edit">
+                        <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-6 h-6"
+                          >
+                            <path
+                              d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                            />
+                          </svg>
+                        </div>
+                          </div>
+                        </div>
+                    <div id="container-buy">
+                      <img src="img/galletas integrales.jpg" alt="" />
+                      <div class="container-info">
+                        <p class="container-titulo">Integrales</p>
+                        <p class="container-precio">$1.52 100g</p>
+                      </div>
+                      <div id="btn-edit">
+                        <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-6 h-6"
+                          >
+                            <path
+                              d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                            />
+                          </svg>
+                        </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- section 5-->
+                      <div class="subtitle-platters subtitle-bg" id="section-5">
+                        <h1 class="text-slate-100" data-aos="fade-up" data-aos-duration="800">Salsas y Dips</h1>
+                      </div>
+                      
+                      <div class="section-buy" data-aos="fade-up" data-aos-duration="1500">
+                        <div id="container-buy">
+                          <img src="img/pate de tomate.jpg" alt="" />
+                          <div class="container-info">
+                            <p class="container-titulo">Pate de tomate</p>
+                            <p class="container-precio">$$2.24 100g</p>
+                          </div>
+                          <div id="btn-edit">
+                            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                />
+                              </svg>
+                            </div>
+                              </div>
+                            </div>
+                        <div id="container-buy">
+                          <img src="img/Pate de atun.jpg" alt="" />
+                          <div class="container-info">
+                            <p class="container-titulo">Pate de atún</p>
+                            <p class="container-precio">$3.20 100g</p>
+                          </div>
+                          <div id="btn-edit">
+                            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                />
+                              </svg>
+                            </div>
+                              </div>
+                            </div>
+                        <div id="container-buy">
+                          <img src="img/pesto.jpg" alt="" />
+                          <div class="container-info">
+                            <p class="container-titulo">Pesto</p>
+                            <p class="container-precio">$2.42 100g</p>
+                          </div>
+                          <div id="btn-edit">
+                            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                />
+                              </svg>
+                            </div>
+                              </div>
+                            </div>
+                        <div id="container-buy">
+                          <img src="img/mostaza dijon.jpg" alt="" />
+                          <div class="container-info">
+                            <p class="container-titulo">Mostaza Dijon</p>
+                            <p class="container-precio">$2.05 100g</p>
+                          </div>
+                          <div id="btn-edit">
+                            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                />
+                              </svg>
+                            </div>
+                              </div>
+                            </div>
+                        <div id="container-buy">
+                          <img src="img/Guacamole.jpg" alt="" />
+                          <div class="container-info">
+                            <p class="container-titulo">Guacamole</p>
+                            <p class="container-precio">$2.85 100g</p>
+                          </div>
+                          <div id="btn-edit">
+                            <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                />
+                              </svg>
+                            </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- section 6 -->
+                          <div class="subtitle-platters subtitle-bg" id="section-6">
+                            <h1 class="text-slate-100" data-aos="fade-up" data-aos-duration="800">Frutas</h1>
+                          </div>
+                          
+                          <div class="section-buy" data-aos="fade-up" data-aos-duration="1500">
+                            <div id="container-buy">
+                              <img src="img/kiwi.jpg" alt="" />
+                              <div class="container-info">
+                                <p class="container-titulo">Kiwi</p>
+                                <p class="container-precio">$1.50 100g</p>
+                              </div>
+                              <div id="btn-edit">
+                                <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="w-6 h-6"
+                                  >
+                                    <path
+                                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                    />
+                                  </svg>
+                                </div>
+                                  </div>
+                                </div>
+                            <div id="container-buy">
+                              <img src="img/fresas.jpg" alt="" />
+                              <div class="container-info">
+                                <p class="container-titulo">Fresas</p>
+                                <p class="container-precio">$2.24 100g</p>
+                              </div>
+                              <div id="btn-edit">
+                                <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="w-6 h-6"
+                                  >
+                                    <path
+                                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                    />
+                                  </svg>
+                                </div>
+                                  </div>
+                                </div>
+                            <div id="container-buy">
+                              <img src="img/pitahaya.jpeg" alt="" />
+                              <div class="container-info">
+                                <p class="container-titulo">Pitahaya</p>
+                                <p class="container-precio">$2.40 100g</p>
+                              </div>
+                              <div id="btn-edit">
+                                <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="w-6 h-6"
+                                  >
+                                    <path
+                                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                    />
+                                  </svg>
+                                </div>
+                                  </div>
+                                </div>
+                            <div id="container-buy">
+                              <img src="img/mandarina.jpg" alt="" />
+                              <div class="container-info">
+                                <p class="container-titulo">Mandarinas</p>
+                                <p class="container-precio">$1.75 100g</p>
+                              </div>
+                              <div id="btn-edit">
+                                <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="w-6 h-6"
+                                  >
+                                    <path
+                                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                    />
+                                  </svg>
+                                </div>
+                                  </div>
+                                </div>
+                            <div id="container-buy">
+                              <img src="img/uvas.jpg" alt="" />
+                              <div class="container-info">
+                                <p class="container-titulo">Uvas</p>
+                                <p class="container-precio">$1.68 100g</p>
+                              </div>
+                              <div id="btn-edit">
+                                <div class="btns-buy" id="add-btn" title="Agregar al carrito">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="w-6 h-6"
+                                  >
+                                    <path
+                                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                                    />
+                                  </svg>
+                                </div>
+                                  </div>
+                                </div>
+                              </div>
+
+
+          <!-- footer -->
+          <footer data-aos="fade-right" data-aos-duration="1500">
+            <div class="footer-upper">
+              <div class="footer-logo">
+                  <h1 id="title">
+                    <a href="/">Dgusta Platters</a>
+                  </h1>
+              </div>
+              <div class="footer-links">
+                <div>
+                  <h1>Navegacion</h1>
+                  <ul class="footer-col">
+                    <li><a href="#section-1">Quesos</a></li>
+                    <li><a href="#section-2">Panes</a></li>
+                    <li><a href="#section-3">Charcutería</a></li>
+                    <li><a href="#section-4">Galletas</a></li>
+                    <li><a href="#section-5">Salsas y Dips</a></li>
+                    <li><a href="#section-6">Frutas</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h1>Usuario</h1>
+                  <ul class="footer-col">
+                    <li><a href="/">Home</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <hr id="hr-footer" />
+            <div id="footer-copy">
+              <div class="footer-social">
+                <a href="placeholder" target="_blank"
+                  ><img class="redes" src="img/facebook.png" alt=""
+                /></a>
+                <a
+                  href="https://www.instagram.com/dgustaplatters/?hl=es"
+                  target="_blank"
+                  ><img class="redes" src="img/instagram.png" alt=""
+                /></a>
+                <a href="placeholder" target="_blank"
+                  ><img class="redes" src="img/whatsapp.png" alt=""
+                /></a>
+              </div>
+              <h4>©Copyright. All rights reserved</h4>
+            </div>
+          </footer>
+
+          <script src="index.js"></script>
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+            AOS.init();
+          </script>
+  </body>
+</html>

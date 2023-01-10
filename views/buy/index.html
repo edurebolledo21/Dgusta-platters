@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="img/icons8-tapas-80 (1).ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400;500;600;700&family=Inconsolata:wght@400;600;700&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@400;500;600;700&family=Inconsolata:wght@400;600;700&family=Josefin+Sans:wght@300&family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>Ordenar</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="recibo" data-aos="fade-right" data-aos-duration="1500">
+        <section class="car" id="car-id">
+          <table>
+            <thead>
+              <tr>
+                <th class="table-title">Imagen</th>
+                <th class="table-title">Nombre</th>
+                <th class="table-title">Precio</th>
+                <th class="table-title">Cantidad</th>
+                <th class="table-title"></th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </section>
+        <div id="total">
+          <div id="flex-btn">
+            <button class="btns-carrito" id="btn-comprar">ORDENAR</button>
+            <a href="/"><button class="btns-carrito" id="btn-clear">VOLVER A INICIO</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
