@@ -30,23 +30,46 @@ element.innerHTML = `
 
 totalHtml.append(element);
 
-ordenar.addEventListener("click", (e) => {
-  const pdfArray = articulosCarrito.map(
-    (articulo) =>
-      `-- Nombre: ${articulo.name} / 
-    Precio: ${articulo.precio} /
-  Cantidad: ${articulo.cantidad}`
-  );
-  console.log(pdfArray);
-  const documento = new jsPDF();
-  documento.text(
-    `${pdfArray} 
-  TOTAL: ${total} `,
-    10,
-    10
-  );
-  documento.save("PEDIDO.pdf");
-  table.innerHTML = "";
+// ordenar.addEventListener("click", (e) => {
+//   const pdfArray = articulosCarrito.map(
+//     (articulo) =>
+//       `-- Nombre: ${articulo.name} /
+//     Precio: ${articulo.precio} /
+//   Cantidad: ${articulo.cantidad}`
+//   );
+//   console.log(pdfArray);
+//   const documento = new jsPDF();
+//   documento.text(
+//     `${pdfArray}
+//   TOTAL: ${total} `,
+//     10,
+//     10
+//   );
+//   documento.save("PEDIDO.pdf");
+//   table.innerHTML = "";
+//   articulosCarrito = [];
+//   syncStorage("carrito", articulosCarrito);
+// });
+
+ordenar.addEventListener("click", async (e) => {
+  const articulos = articulosCarrito.map((articulo) => {
+    return {
+      price_data: {
+        currency: "usd",
+        product_data: {
+          name: articulo.name,
+        },
+        unit_amount: parseInt(articulo.precio.split("$")[1].split(" ", 1) * 100),
+      },
+      quantity: articulo.cantidad,
+    };
+  });
+
+  await axios.post("/api/stripe", {
+    articulos,
+    domain: window.location.origin,
+  });
+
   articulosCarrito = [];
   syncStorage("carrito", articulosCarrito);
 });
