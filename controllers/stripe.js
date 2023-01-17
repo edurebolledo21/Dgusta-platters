@@ -10,6 +10,7 @@ stripeRouter.post("/", async (req, res) => {
     mode: "payment",
     success_url: `${req.body.domain}/success`,
     cancel_url: `${req.body.domain}/buy`,
+    customer_creation: "always",
   });
 
   res.json({ url: session.url });
