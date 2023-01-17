@@ -61,17 +61,17 @@ ordenar.addEventListener("click", async (e) => {
         },
         unit_amount: parseInt(articulo.precio.split("$")[1].split(" ", 1) * 100),
       },
+      adjustable_quantity: { enabled: true, minimum: 1, maximum: 9999 },
       quantity: articulo.cantidad,
     };
   });
 
-  await axios.post("/api/stripe", {
+  const res = await axios.post("/api/stripe", {
     articulos,
     domain: window.location.origin,
   });
 
-  articulosCarrito = [];
-  syncStorage("carrito", articulosCarrito);
+  window.location.href = res.data.url;
 });
 
 function syncStorage(key, value) {

@@ -60,9 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 carritoBtn.forEach((btn) =>
   btn.addEventListener("click", (e) => {
-    const img = e.target.parentElement.parentElement.children[0].src;
-    const name = e.target.parentElement.parentElement.children[1].children[0].textContent;
-    const precio = e.target.parentElement.parentElement.children[1].children[1].textContent;
+    let target = btn.parentElement.parentElement;
+
+    const img = target.children[0].src;
+    const name = target.children[1].children[0].textContent;
+    const precio = target.children[1].children[1].textContent;
 
     const exist = [...table.children].find((element) => element.children[1].innerHTML === name);
 

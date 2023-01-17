@@ -9,10 +9,10 @@ stripeRouter.post("/", async (req, res) => {
     },
     mode: "payment",
     success_url: `${req.body.domain}/success`,
-    cancel_url: `${req.body.domain}/cancel`,
+    cancel_url: `${req.body.domain}/buy`,
   });
 
-  res.redirect(303, session.url);
+  res.json({ url: session.url });
 });
 
 module.exports = stripeRouter;
