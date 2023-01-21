@@ -1,3 +1,5 @@
+**TEST MODE**
+
 To simulate successful payments from many countries, use test cards from the following sections.
 
 - Use a valid future date, such as 12/34.
@@ -14,6 +16,7 @@ To simulate successful payments from many countries, use test cards from the fol
 ![test-card c3f9b3d1a3e8caca3c9f4c9c481fd49c](https://user-images.githubusercontent.com/95842645/212977373-f1309789-84d5-40fc-b56d-e8a877d50f59.jpg)
 
 **Declined payments**
+
 To simulate payments that the issuer declines for various reasons, use test cards from this section. This can be useful for testing your integration’s error handling logic.
 
 |         DESCRIPTION        |      NUMBER      |    ERROR CODE    |    DECLINE CODE    |
