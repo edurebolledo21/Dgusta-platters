@@ -153,6 +153,7 @@ ordenarSelect.addEventListener("input", (e) => {
 
 [cerrarSesion, cerrarSesionIcon].forEach((elem) =>
   elem.addEventListener("click", async (e) => {
+    localStorage.removeItem("inicio");
     try {
       await axios.get("/api/logout");
       localStorage.removeItem("inicio");
@@ -171,83 +172,3 @@ ordenarSelect.addEventListener("input", (e) => {
 function syncStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
-
-// zoom
-
-// const zoom = document.querySelectorAll(".zoom")[0];
-// const zoomImage = document.querySelectorAll(".zoom-image")[0];
-
-// let clearSrc;
-// let zoomLevel = 1;
-
-// const enterImage = function (e) {
-//   zoom.classList.add("show", "loading");
-//   clearTimeout(clearSrc);
-
-//   let posX = e.clientX;
-//   let posY = e.clientY + document.documentElement.scrollTop;
-
-//   zoom.style.top = `${posY - zoom.offsetHeight / 2}px`;
-//   zoom.style.left = `${posX - zoom.offsetWidth / 2}px`;
-
-//   let originalImage = this.getAttribute("src");
-
-//   zoomImage.setAttribute("src", originalImage);
-
-//   // remove the loading class
-//   zoomImage.onload = function () {
-//     console.log("hires image loaded!");
-//     setTimeout(() => {
-//       zoom.classList.remove("loading");
-//     }, 500);
-//   };
-// };
-
-// const leaveImage = function () {
-//   // remove scaling to prevent non-transition
-//   zoom.style.transform = null;
-//   zoomLevel = 1;
-//   zoom.classList.remove("show");
-//   clearSrc = setTimeout(() => {
-//     zoomImage.setAttribute("src", "");
-//   }, 250);
-// };
-
-// const move = function (e) {
-//   e.preventDefault();
-
-//   let posX = e.clientX;
-//   let posY = e.clientY + document.documentElement.scrollTop;
-
-//   // move the zoom a little bit up on mobile (because of your fat fingers :<)
-//   zoom.style.top = `${posY - zoom.offsetHeight / 2}px`;
-//   zoom.style.left = `${posX - zoom.offsetWidth / 2}px`;
-
-//   let percX = (posX - this.offsetLeft) / this.offsetWidth,
-//     percY = (posY - this.offsetTop) / this.offsetHeight;
-
-//   let zoomLeft = (-percX * zoomImage.offsetWidth + zoomImage.offsetWidth / 2) * 3.5,
-//     zoomTop = (-percY * zoomImage.offsetHeight + zoomImage.offsetHeight / 2) * 3.5;
-
-//   zoomImage.style.left = `${zoomLeft}px`;
-//   zoomImage.style.top = `${zoomTop}px`;
-// };
-
-// const images = document.querySelectorAll("#container-buy > img");
-
-// images.forEach((image) => {
-//   if (!window.matchMedia("(pointer: coarse)").matches) {
-//     image.addEventListener("mouseover", enterImage);
-//     image.addEventListener("mouseout", leaveImage);
-//     image.addEventListener("mousemove", move);
-
-//     image.addEventListener("wheel", (e) => {
-//       e.preventDefault();
-//       e.deltaY > 0 ? (zoomLevel -= 0.5) : (zoomLevel += 0.5);
-
-//       if (zoomLevel < 1) zoomLevel = 1;
-//       if (zoomLevel > 2) zoomLevel = 2;
-//       zoom.style.transform = `scale(${zoomLevel})`;
-//     });
-//   }
-// });
